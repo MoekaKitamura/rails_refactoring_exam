@@ -9,4 +9,12 @@ module ClubDecorator
 
     "matches: #{matches} won: #{won} lost: #{lost} draw: #{draw}"
   end
+
+  def homebase
+    "#{hometown}, #{country}"
+  end
+
+  def players_average_age
+    (self.players.sum(&:age) / self.players.length).to_f
+  end
 end
